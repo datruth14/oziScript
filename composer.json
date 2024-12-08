@@ -1,0 +1,33 @@
+{
+    "name": "ozi/ozi_script",
+    "description": "Ozi script Is an easy-to-use web development framework that is built to handle both front and back-end web development. Ozi script is a component-based concept, meaning that everything in ozi script is a component and a component is a method or functions created to handle a specific task.",
+    "type": "framework",
+    "keywords": ["framework", "php", "web", "mvc", "routing"],
+    "homepage": "https://github.com/datruth14/oziScript",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Francis",
+            "email": "Datruth14.vd@gmail.com",
+            "role": "CEO 14Eter | Lead Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 'oziScript installation complete!'"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
