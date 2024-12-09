@@ -4,7 +4,7 @@
     "type": "project",
     "keywords": ["framework", "php", "web", "mvc", "routing"],
     "homepage": "https://github.com/datruth14/oziScript",
-    "license": "14Eter Limited",
+    "license": "MIT",
     "authors": [
         {
             "name": "Victor Francis",
