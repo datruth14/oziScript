@@ -6,9 +6,6 @@
             "url": "https://github.com/datruth14/ozi_script_0.5.git"
         }
     ],
-    "require": {
-        "ozi/ozi_script": "0.5"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
