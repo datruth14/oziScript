@@ -4,7 +4,7 @@
     "type": "project",
     "keywords": ["framework", "php", "web", "mvc", "routing"],
     "homepage": "https://github.com/datruth14/oziScript",
-    "license": "MIT",
+    "license": "14Eter Limited",
     "authors": [
         {
             "name": "Victor Francis",
@@ -18,14 +18,10 @@
         "ext-mbstring": "*",
         "ext-curl": "*"
     },
-    "autoload": {
-        "psr-4": {
-            "OziScript\\": "src/"
-        }
-    },
     "scripts": {
         "post-install-cmd": [
-            "echo 'oziScript installation complete!'"
+            "echo 'oziScript installation complete!'",
+            "mkdir -p /desired/installation/path && cp -r * /desired/installation/path"
         ]
     },
     "minimum-stability": "dev",
