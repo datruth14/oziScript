@@ -8,5 +8,7 @@
     ],
     "require": {
         "ozi/ozi_script": "0.5"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
