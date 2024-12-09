@@ -1,4 +1,5 @@
 {
+    "name": "ozi/ozi_script",
     "repositories": [
         {
             "type": "vcs",
