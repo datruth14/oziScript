@@ -4,7 +4,7 @@
     "type": "project",
     "keywords": ["framework", "php", "web", "mvc", "routing"],
     "homepage": "https://github.com/datruth14/oziScript",
-    "license": "MIT",
+    "license": "14Eter Limited",
     "authors": [
         {
             "name": "Victor Francis",
@@ -20,9 +20,7 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "echo 'oziScript installation complete!'",
-            "rm -rf composer.json composer.lock", 
-            "rm -rf vendor"
+            "echo 'oziScript installation complete!'"
         ]
     },
     "minimum-stability": "dev",
@@ -39,7 +37,8 @@
         "exclude": [
             "composer.json",
             "composer.lock",
-            "vendor"
+            "vendor",
+            "tests"
         ]
     }
 }
