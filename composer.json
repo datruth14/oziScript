@@ -1,8 +1,8 @@
 {
     "name": "ozi/ozi_script",
-    "description": "Ozi script Is an easy-to-use web development framework that is built to handle both front and back-end web development. Ozi script is a component-based concept, meaning that everything in ozi script is a component and a component is a method or functions created to handle a specific task.",
+    "description": "Ozi script is an easy-to-use web development framework that is built to handle both front and back-end web development. Ozi script is a component-based concept, meaning that everything in ozi script is a component and a component is a method or function created to handle a specific task.",
     "keywords": ["framework", "php", "custom", "application"],
-    "type": "project", 
+    "type": "project",
     "repositories": [
         {
             "type": "vcs",
@@ -10,9 +10,14 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "ozi/ozi_script": "dev-master"  // or specify another branch/tag if needed
+    },
+    "autoload": {
+        "psr-4": {
+            "Ozi\\OziScript\\": "src/"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-
 }
