@@ -21,7 +21,8 @@
     "scripts": {
         "post-install-cmd": [
             "echo 'oziScript installation complete!'",
-            "mkdir -p /desired/installation/path && cp -r * /desired/installation/path"
+            "rm -rf composer.json composer.lock", 
+            "rm -rf vendor"
         ]
     },
     "minimum-stability": "dev",
@@ -30,5 +31,15 @@
         "branch-alias": {
             "dev-master": "1.x-dev"
         }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "archive": {
+        "exclude": [
+            "composer.json",
+            "composer.lock",
+            "vendor"
+        ]
     }
 }
