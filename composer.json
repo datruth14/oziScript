@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "ozi/ozi_script": "dev-master"  // or specify another branch/tag if needed
+        "ozi/ozi_script": "dev-master"
     },
     "autoload": {
         "psr-4": {
