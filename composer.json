@@ -17,7 +17,5 @@
         "psr-4": {
             "Ozi\\OziScript\\": "src/"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
