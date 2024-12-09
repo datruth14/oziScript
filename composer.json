@@ -1,0 +1,62 @@
+{
+    "name": "ozi/ozi_script",
+    "description": "Ozi script Is an easy-to-use web development framework that is built to handle both front and back-end web development. Ozi script is a component-based concept, meaning that everything in ozi script is a component and a component is a method or functions created to handle a specific task.",
+    "keywords": ["framework", "php", "custom", "application"],
+    "type": "project", 
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/datruth14/oziScript.git"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+
+}
+
+
+
+
+{
+    "name": "ozi/ozi_script",
+    "description": "Ozi script Is an easy-to-use web development framework that is built to handle both front and back-end web development. Ozi script is a component-based concept, meaning that everything in ozi script is a component and a component is a method or functions created to handle a specific task.",
+    "keywords": ["framework", "php", "custom", "application"],
+    "type": "project", 
+    "keywords": ["php", "framework", "web"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com",
+            "homepage": "https://github.com/datruth14/oziScript.git",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourFramework\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YourFramework\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyze": "phpstan analyse"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
