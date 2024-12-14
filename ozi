@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+
+// Define commands
+$commands = [
+    'hello' => function () {
+        echo "Hello, World!\n";
+    },
+    'greet' => function ($name = 'Guest') {
+        echo "Hello, $name!\n";
+    },
+    'sum' => function ($a, $b) {
+        echo "The sum of $a and $b is " . ($a + $b) . "\n";
+    },
+];
+
+// Get command and arguments
+$args = $argv;
+array_shift($args); // Remove the script name
+$command = $args[0] ?? null; // First argument is the command
+$params = array_slice($args, 1); // Remaining arguments are parameters
+
+// Check if command exists
+if (isset($commands[$command])) {
+    call_user_func_array($commands[$command], $params);
+} else {
+    echo "Command '$command' not found.\n";
+    echo "Available commands are:\n";
+    foreach (array_keys($commands) as $cmd) {
+        echo "  - $cmd\n";
+    }
+}
