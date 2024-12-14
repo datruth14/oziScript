@@ -8,4 +8,6 @@ if (isset($commands[$command])) {
     foreach (array_keys($commands) as $cmd) {
         echo "  - $cmd\n";
     }
+
+    
 }

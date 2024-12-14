@@ -3,64 +3,7 @@
 session_start();
 //echo ini_get("session.gc_maxlifetime"), "\n";
 
-/** BELOW ARE THE REQUIRED DEPENDENCIES FOR OZI SCRIPT, PLUGIN AND LIBRARIES ARE TO BE UNCOMMENTED IF NOT IN USE. You Can Add New Labraries If You Know How It Works.. Learn More At https://ozi.com.ng */
-
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-/*========  PLUGIN'S ============*/
-
-//get more plugins as you wish
-
-//Getting mail_agent
-//require 'system_files/plugins/mail_agent/index.php';
-
-//Getting Carbon
-//require 'system_files/plugins/carbon/index.php';
-
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-/*========  END OF PLUGIN'S ============*/
-
-
-
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-/*==== LIBRARIES ==============*/
-
-//calling app router Lib
-require "system_files/libraries/router.php";
-
-//calling cssd lib
-require "system_files/libraries/cssd.php";
-
-//calling jsd lib
-require "system_files/libraries/jsd.php";
-
-//calling iosMedia lib
-require "system_files/libraries/ios_media.php";
-
-/*====END OF ======== LIBRARIES */
-/*====END OF ======== LIBRARIES */
-/*====END OF ======== LIBRARIES */
-/*====END OF ======== LIBRARIES */
-/*====END OF ======== LIBRARIES */
-/*====END OF ======== LIBRARIES */
-/*====END OF ======== LIBRARIES */
+/** BELOW ARE THE REQUIRED DEPENDENCIES FOR OZI SCRIPT, PLUGIN AND WIDGETS ARE TO BE COMMENTED or UNCOMMENTED IF NOT IN USE. You Can Add New Labraries If You Know How It Works.. Learn More At https://oziscript.com */
 
 
 
@@ -68,68 +11,81 @@ require "system_files/libraries/ios_media.php";
 
 
 
+/*=======  SYSTEM CONFIGURE (DONT EDIT ONLY USE CLI ADD OR REMOVE DEPENDENCIES) ============*/
+/*=======  SYSTEM CONFIGURE (DONT EDIT ONLY USE CLI ADD OR REMOVE DEPENDENCIES) ============*/
+/*=======  SYSTEM CONFIGURE (DONT EDIT ONLY USE CLI ADD OR REMOVE DEPENDENCIES) ============*/
+/*=======  SYSTEM CONFIGURE (DONT EDIT ONLY USE CLI ADD OR REMOVE DEPENDENCIES) ============*/
+/*=======  SYSTEM CONFIGURE (DONT EDIT ONLY USE CLI ADD OR REMOVE DEPENDENCIES) ============*/
+/*=======  SYSTEM CONFIGURE (DONT EDIT ONLY USE CLI ADD OR REMOVE DEPENDENCIES) ============*/
+$files = [
+    'libraries' => [
+        /*=======  GETTING LIBRARIES FILES ....  ============*/
+
+        //calling app router Lib
+        require "system_files/libraries/router.php",
+        //calling cssd lib
+        require "system_files/libraries/cssd.php",
+        //calling jsd lib
+        require "system_files/libraries/jsd.php",
+        //calling iosMedia lib
+        require "system_files/libraries/ios_media.php",
+
+        /*=======  END OF GETTING LIRARIES FILES ....  ============*/
+
+    ],
+
+    'plugins' => [
+        /*=======  GETTING PLUGIN FILES ....  ============*/
+
+        //Getting mail_agent plugin
+        //require 'system_files/plugins/mail_agent/index.php',
+        //Getting Carbon plugin
+        //require 'system_files/plugins/carbon/index.php',
+
+        /*=======  END OF GETTING PLUGIN FILES ....  ============*/],
 
 
+    'widgets' => [
+        /*=======  GETTING WIDGETS FILES ....  ============*/
+        // Getting sweet_alert widget
+        require "system_files/widgets/sweet_alert.php",
+        //Getting Modal widget
+        //require "system_files/widgets/modal.php",
+        //Getting FAB widget
+        //require "system_files/widgets/fab.php",
+        //Getting navbar Widget
+        //require "system_files/widgets/navbar.php",
+        //Getting cardItems widget
+        //require "system_files/widgets/cardItems.php",
+        //Getting linkTo widget
+        //require "system_files/widgets/linkTo.php",
+        //Getting quick_alert Widget
+        //require "system_files/widgets/quick_alert.php",
+        //Getting native share widget
+        //require "system_files/widgets/sharePage.php",
+        //Getting qrcode gen Widget
+        //require "system_files/widgets/qrcode.php",
+
+        /*=======  END GETTING WIDGETS FILES .... ============*/
+    ],
 
 
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
-/*==== WIDGETs ==============*/
+    'system_setup' => [
+        /*=======  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
 
-    //require "system_files/widgets/modal.php";
+        //004 Getting the file that is required to for building your app screen
+        require 'view.php',
 
-    //require "system_files/widgets/fab.php";
+        //003 Getting required file for your uert interface (UI) design
+        require 'ui_config.php',
 
-    //require "system_files/widgets/navbar.php";
+        //002 Getting required BackEnd config 
+        require "create_bk_request.php",
 
-    require "system_files/widgets/cardItems.php";
+        //001 Getting required BackEnd config
+        require "call_bk_request.php",
 
-    require "system_files/widgets/linkTo.php";
+        /*=======END OF  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
+    ],
 
-    //require "system_files/widgets/quick_alert.php";
-
-    //require "system_files/widgets/sharePage.php";
-
-    //require "system_files/widgets/qrcode.php";
-
-
-/*====END OF ======== WIDGETS */
-/*====END OF ======== WIDGETS */
-/*====END OF ======== WIDGETS */
-/*====END OF ======== WIDGETS */
-/*====END OF ======== WIDGETS */
-/*====END OF ======== WIDGETS */
-/*====END OF ======== WIDGETS */
-
-
-
-
-
-
-
-
-
-
-
-/*=======  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-
-//006 Getting the file that is required to for building your app screen
-require 'view.php';
-
-//003 Getting required file for your uert interface (UI) design
-require 'ui_config.php';
-
-/*=======END OF  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======END OF  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======END OF  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======END OF  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
-/*=======END OF  SYSTEM REQUIRED FILES, DO NOT EDIT THIS FILES BELOW....  ============*/
+];
