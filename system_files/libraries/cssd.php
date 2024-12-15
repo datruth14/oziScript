@@ -21,8 +21,14 @@ function CssDependency() {
     <!--sweet alert-->
     <link rel="stylesheet" href="assets/style/default_css/sweetalert.css" />
 
+    <!--Google Material Icon->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
     <!--default css-->
     <link rel="stylesheet" type="text/css" href="assets/style/default_css/main.css" />
+
+
     
  
   <?php 

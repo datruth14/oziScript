@@ -47,27 +47,8 @@ $files = [
 
     'widgets' => [
         /*=======  GETTING WIDGETS FILES ....  ============*/
-        // Getting sweet_alert widget
-        require "system_files/widgets/sweet_alert.php",
-        //Getting Modal widget
-        //require "system_files/widgets/modal.php",
-        //Getting FAB widget
-        //require "system_files/widgets/fab.php",
-        //Getting navbar Widget
-        //require "system_files/widgets/navbar.php",
-        //Getting cardItems widget
-        //require "system_files/widgets/cardItems.php",
-        //Getting linkTo widget
-        //require "system_files/widgets/linkTo.php",
-        //Getting quick_alert Widget
-        //require "system_files/widgets/quick_alert.php",
-        //Getting native share widget
-        //require "system_files/widgets/sharePage.php",
-        //Getting qrcode gen Widget
-        //require "system_files/widgets/qrcode.php",
-
-        /*=======  END GETTING WIDGETS FILES .... ============*/
-    ],
+   
+/*=======  END GETTING WIDGETS FILES .... ============*/],
 
 
     'system_setup' => [
