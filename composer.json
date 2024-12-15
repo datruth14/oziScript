@@ -26,14 +26,7 @@
             "OziFramework\\Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "post-create-project-cmd": [
-            "@php artisan migrate",
-            "@php artisan serve"
-        ],
-        "test": "phpunit",
-        "analyze": "phpstan analyse"
-    },
+    
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true

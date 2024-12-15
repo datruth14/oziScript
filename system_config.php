@@ -37,18 +37,14 @@ $files = [
     'plugins' => [
         /*=======  GETTING PLUGIN FILES ....  ============*/
 
-        //Getting mail_agent plugin
-        //require 'system_files/plugins/mail_agent/index.php',
-        //Getting Carbon plugin
-        //require 'system_files/plugins/carbon/index.php',
 
-        /*=======  END OF GETTING PLUGIN FILES ....  ============*/],
-
+                /*=======  END OF GETTING PLUGIN FILES ....  ============*/
+    ],
 
     'widgets' => [
         /*=======  GETTING WIDGETS FILES ....  ============*/
-   
-/*=======  END GETTING WIDGETS FILES .... ============*/],
+
+        /*=======  END GETTING WIDGETS FILES .... ============*/],
 
 
     'system_setup' => [
