@@ -7,9 +7,9 @@
 		 //echo '<script>alert("You are working on a local machine AKA client Server")</script>';
 		
 			$server  = "localhost";
-			$username = "localhost username eg(root)";
-			$password = "localhost password eg( )";
-			$database = "localhost database name eg(mydbname)";
+			$username = ""; //localhost username eg(root)
+			$password = "";//localhost password eg( )
+			$database = "";//localhost database name eg(mydbname)
 		//connecting to server 
 			$conn 	  = mysqli_connect($server, $username,$password, $database);
 		//checking if connection was successful
@@ -23,9 +23,9 @@
 		
 		 //echo '<script>alert("You are working on a hosted machine AKA server")</script>';
 			$server	  = "localhost";
-			$username = "live server username eg(myusername)";
-			$password = "live server password eg(mypassword)";
-			$database = "live server database eg(mydbname)";
+			$username = ""; //live server username eg(myusername)
+			$password = "";//live server password eg(mypassword)
+			$database = "";//live server database eg(mydbname)
 		//connecting to server 
 			$conn 	  = mysqli_connect($server, $username,$password, $database);
 		//checking if connection was successful

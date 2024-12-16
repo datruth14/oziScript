@@ -104,7 +104,7 @@ $commands = [
 
         if ($action === 'create') {
             // Step 1: Append the function to view.php with spacing
-            $functionContent = "function $screenName() {\n    require \"$dbConfigPath\";\n    require \"$componentsFolder/$screenName.php\";\n}\n\n\n";
+            $functionContent = "function $screenName() {\n    //require \"$dbConfigPath\";\n    require \"$componentsFolder/$screenName.php\";\n}\n\n\n";
 
             if (!file_exists($viewFile)) {
                 echo "The file $viewFile does not exist. Creating it...\n";
