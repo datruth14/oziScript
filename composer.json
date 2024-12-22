@@ -12,21 +12,8 @@
             "role": "Lead Developer"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "OziFramework\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "OziFramework\\Tests\\": "tests/"
-        }
-    },
     
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
+    
     "minimum-stability": "stable",
     "prefer-stable": true
 }
