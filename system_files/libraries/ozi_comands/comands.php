@@ -187,6 +187,99 @@ $commands = [
 
 
     //comand line config 
+    'build' => function () {
+        global $argv;
+
+        if (php_sapi_name() !== 'cli') {
+            echo "This script can only be run from the command line.\n";
+            return;
+        }
+
+        $args = $argv;
+
+        if (count($args) < 3 || $args[1] !== 'build') {
+            echo "Usage:\n";
+            echo "  php ozi build android\n";
+            echo "  php ozi build ios\n";
+            echo "  php ozi build mac\n";
+            echo "  php ozi build windows\n";
+            echo "  php ozi build linux\n";
+            return;
+        }
+
+        $platform = strtolower($args[2]);
+
+        // Function to check and install missing tools
+        $ensureTools = function ($commands) {
+            foreach ($commands as $command => $installCommand) {
+                if (!shell_exec("command -v $command")) {
+                    echo "Tool '$command' is missing. Installing...\n";
+                    shell_exec($installCommand);
+                    if (!shell_exec("command -v $command")) {
+                        echo "Failed to install '$command'. Please install it manually.\n";
+                        exit(1);
+                    }
+                    echo "Tool '$command' installed successfully.\n";
+                }
+            }
+        };
+
+        switch ($platform) {
+            case 'android':
+                $ensureTools([
+                    'cordova' => 'npm install -g cordova',
+                    'java' => 'sudo apt install default-jdk -y || brew install openjdk',
+                    'android' => 'echo "Please install the Android SDK manually if not already installed."'
+                ]);
+                echo "Building for Android...\n";
+                shell_exec("cordova build android");
+                echo "Android build completed. APK is in the 'platforms/android/app/build/outputs/apk' folder.\n";
+                break;
+
+            case 'ios':
+                $ensureTools([
+                    'cordova' => 'npm install -g cordova',
+                    'xcodebuild' => 'echo "Xcode needs to be installed from the App Store."'
+                ]);
+                echo "Building for iOS...\n";
+                shell_exec("cordova build ios");
+                echo "iOS build completed. Use Xcode to finalize and deploy the app.\n";
+                break;
+
+            case 'mac':
+                $ensureTools([
+                    'electron-packager' => 'npm install -g electron-packager'
+                ]);
+                echo "Building for macOS...\n";
+                shell_exec("electron-packager . MyApp --platform=darwin");
+                echo "macOS build completed. Check the output folder for the app.\n";
+                break;
+
+            case 'windows':
+                $ensureTools([
+                    'electron-packager' => 'npm install -g electron-packager'
+                ]);
+                echo "Building for Windows...\n";
+                shell_exec("electron-packager . MyApp --platform=win32");
+                echo "Windows build completed. Check the output folder for the app.\n";
+                break;
+
+            case 'linux':
+                $ensureTools([
+                    'electron-packager' => 'npm install -g electron-packager'
+                ]);
+                echo "Building for Linux...\n";
+                shell_exec("electron-packager . MyApp --platform=linux");
+                echo "Linux build completed. Check the output folder for the app.\n";
+                break;
+
+            default:
+                echo "Unsupported platform: $platform\n";
+                echo "Supported platforms: android, ios, mac, windows, linux.\n";
+                break;
+        }
+    },
+
 
 
 
