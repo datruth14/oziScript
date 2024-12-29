@@ -1,9 +1,12 @@
-
 {
     "name": "ozi/ozi_script",
     "description": "Ozi script Is an easy-to-use web development framework that is built to handle both front and back-end web development. Ozi script is a component-based concept, meaning that everything in ozi script is a component and a component is a method or functions created to handle a specific task.",
     "type": "project",
-    "keywords": ["php", "framework", "web"],
+    "keywords": [
+        "php",
+        "framework",
+        "web"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -12,7 +15,25 @@
             "role": "Lead Developer"
         }
     ],
-    
+    "archive": {
+        "exclude": [
+            "/vendor",
+            "/composer.lock",
+            "/composer.json"
+        ]
+    },
+    "extra": {
+        "installer-exclude": [
+            "/vendor",
+            "/composer.lock",
+            "/composer.json"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf vendor composer.lock composer.json"
+        ]
+    },
     "config": {
         "optimize-autoloader": false,
         "sort-packages": false
@@ -20,4 +41,3 @@
     "minimum-stability": "stable",
     "prefer-stable": true
 }
-
