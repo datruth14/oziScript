@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Victor Francis",
-            "homepage": "",
+            "homepage": "https://oziscript.com",
             "role": "Lead Developer"
         }
     ],
@@ -24,6 +24,7 @@
     "require": {
         "php": ">=8.0"
     },
+
     "archive": {
         "exclude": [
             "/vendor",
@@ -34,11 +35,13 @@
             ".github"
         ]
     },
+
     "scripts": {
         "post-create-project-cmd": [
             "rm -rf vendor || true"
         ]
     },
+
     "autoload": {
         "psr-4": {
             "Ozi\\": "src/"
