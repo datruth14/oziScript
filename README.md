@@ -1,6 +1,4 @@
-For a social media post, formatting can become a bit tricky due to limited space and styling options. To make the post look organized and visually appealing, you might want to consider breaking it into smaller, digestible sections. Here’s an optimized version for social media that keeps things clean and highlights the most important details:
 
----
 
 🚀 **Ozi Script Documentation**  
 **Version**: 0.5
@@ -66,7 +64,3 @@ php ozi plugin <plugin_name> install
 🎥 **Video tutorials** available on our YouTube channel!  
 
 Start building powerful web apps with **Ozi Script** today! 💻✨
-
----
-
-This structure uses short paragraphs, clear bullet points, and code snippets to make the post easy to read and follow on social media. You can also include emojis for visual appeal!
