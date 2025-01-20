@@ -186,7 +186,6 @@ $commands = [
     },
 
 
-    //comand line config 
     'build' => function () {
         global $argv;
 
@@ -199,17 +198,31 @@ $commands = [
 
         if (count($args) < 3 || $args[1] !== 'build') {
             echo "Usage:\n";
-            echo "  php ozi build android\n";
-            echo "  php ozi build ios\n";
-            echo "  php ozi build mac\n";
-            echo "  php ozi build windows\n";
-            echo "  php ozi build linux\n";
+            echo "  php ozi build apk [url]\n";
+            echo "  php ozi build ios [url]\n";
+            echo "  php ozi build mac [url]\n";
+            echo "  php ozi build windows [url]\n";
+            echo "  php ozi build linux [url]\n";
             return;
         }
 
         $platform = strtolower($args[2]);
 
-        // Function to check and install missing tools
+        if (!in_array($platform, ['apk', 'ios', 'mac', 'windows', 'linux'])) {
+            echo "Unsupported platform: $platform\n";
+            echo "Supported platforms: apk, ios, mac, windows, linux.\n";
+            return;
+        }
+
+        if (count($args) < 4) {
+            echo "Error: Please provide a URL for the build.\n";
+            echo "Example: php ozi build $platform https://websitename.com\n";
+            return;
+        }
+
+        $url = $args[3];
+
+        // Function to ensure required tools are installed
         $ensureTools = function ($commands) {
             foreach ($commands as $command => $installCommand) {
                 if (!shell_exec("command -v $command")) {
@@ -224,62 +237,76 @@ $commands = [
             }
         };
 
+        // Function to initialize Electron project
+        $initializeElectronProject = function () use ($url) {
+            if (!file_exists('package.json')) {
+                echo "Initializing Electron project...\n";
+
+                $packageJson = [
+                    'name' => 'myapp',
+                    'version' => '1.0.0',
+                    'main' => 'main.js',
+                    'dependencies' => [],
+                    'devDependencies' => [
+                        'electron' => '^23.1.1',
+                        'electron-packager' => '^17.1.1'
+                    ]
+                ];
+
+                file_put_contents('package.json', json_encode($packageJson, JSON_PRETTY_PRINT));
+
+                // Create a basic Electron main process file
+                $mainJs = <<<JS
+const { app, BrowserWindow } = require('electron');
+
+function createWindow() {
+    const win = new BrowserWindow({
+        width: 800,
+        height: 600,
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
+
+    win.loadURL('$url');
+}
+
+app.on('ready', createWindow);
+JS;
+                file_put_contents('main.js', $mainJs);
+
+                echo "Installing dependencies...\n";
+                shell_exec("npm install");
+            }
+        };
+
         switch ($platform) {
-            case 'android':
-                $ensureTools([
-                    'cordova' => 'npm install -g cordova',
-                    'java' => 'sudo apt install default-jdk -y || brew install openjdk',
-                    'android' => 'echo "Please install the Android SDK manually if not already installed."'
-                ]);
-                echo "Building for Android...\n";
-                shell_exec("cordova build android");
-                echo "Android build completed. APK is in the 'platforms/android/app/build/outputs/apk' folder.\n";
-                break;
-
-            case 'ios':
-                $ensureTools([
-                    'cordova' => 'npm install -g cordova',
-                    'xcodebuild' => 'echo "Xcode needs to be installed from the App Store."'
-                ]);
-                echo "Building for iOS...\n";
-                shell_exec("cordova build ios");
-                echo "iOS build completed. Use Xcode to finalize and deploy the app.\n";
-                break;
-
             case 'mac':
-                $ensureTools([
-                    'electron-packager' => 'npm install -g electron-packager'
-                ]);
-                echo "Building for macOS...\n";
-                shell_exec("electron-packager . MyApp --platform=darwin");
-                echo "macOS build completed. Check the output folder for the app.\n";
-                break;
-
             case 'windows':
-                $ensureTools([
-                    'electron-packager' => 'npm install -g electron-packager'
-                ]);
-                echo "Building for Windows...\n";
-                shell_exec("electron-packager . MyApp --platform=win32");
-                echo "Windows build completed. Check the output folder for the app.\n";
-                break;
-
             case 'linux':
                 $ensureTools([
+                    'npm' => 'sudo apt install npm -y || brew install npm',
                     'electron-packager' => 'npm install -g electron-packager'
                 ]);
-                echo "Building for Linux...\n";
-                shell_exec("electron-packager . MyApp --platform=linux");
-                echo "Linux build completed. Check the output folder for the app.\n";
+                $initializeElectronProject();
+
+                echo "Building for $platform...\n";
+                $command = "electron-packager . MyApp --platform=$platform";
+                shell_exec($command);
+
+                $outputDir = "./MyApp-$platform";
+                if (is_dir($outputDir)) {
+                    echo ucfirst($platform) . " app built successfully in '$outputDir'.\n";
+                } else {
+                    echo "Error: Failed to build for $platform. Check logs for details.\n";
+                }
                 break;
 
             default:
-                echo "Unsupported platform: $platform\n";
-                echo "Supported platforms: android, ios, mac, windows, linux.\n";
+                echo "Error: Platform $platform is not yet supported with Electron.\n";
                 break;
         }
     },
-
 
 
 
