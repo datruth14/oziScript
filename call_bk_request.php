@@ -1,2 +1,1 @@
 <?php 
-//hcalling signupHandler component
