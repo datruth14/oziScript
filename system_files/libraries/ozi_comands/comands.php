@@ -186,6 +186,28 @@ $commands = [
     },
 
 
+    // Command-line config for backend requests
+     'create_bk_request' => function () {
+        global $argv;
+        if (!isset($argv[2])) {
+            echo "Usage: php ozi create_bk_request <request_name>\n";
+            return;
+        }
+        create_bk_request($argv[2]);
+    },
+  
+    
+    // Command-line config for backend requests delete
+    'delete_bk_request' => function () {
+        global $argv;
+        if (!isset($argv[2])) {
+            echo "Usage: php ozi delete_bk_request <request_name>\n";
+            return;
+        }
+        delete_bk_request($argv[2]);
+    },
+
+    //comand line to build/package apps
     'build' => function () {
         global $argv;
 
@@ -257,57 +279,57 @@ $commands = [
 
                 // Create a basic Electron main process file
                 $mainJs = <<<JS
-const { app, BrowserWindow } = require('electron');
+            const { app, BrowserWindow } = require('electron');
 
-function createWindow() {
-    const win = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
+            function createWindow() {
+                const win = new BrowserWindow({
+                    width: 800,
+                    height: 600,
+                    webPreferences: {
+                        nodeIntegration: true
+                    }
+                });
 
-    win.loadURL('$url');
-}
-
-app.on('ready', createWindow);
-JS;
-                file_put_contents('main.js', $mainJs);
-
-                echo "Installing dependencies...\n";
-                shell_exec("npm install");
+                win.loadURL('$url');
             }
-        };
 
-        switch ($platform) {
-            case 'mac':
-            case 'windows':
-            case 'linux':
-                $ensureTools([
-                    'npm' => 'sudo apt install npm -y || brew install npm',
-                    'electron-packager' => 'npm install -g electron-packager'
-                ]);
-                $initializeElectronProject();
+            app.on('ready', createWindow);
+            JS;
+                            file_put_contents('main.js', $mainJs);
 
-                echo "Building for $platform...\n";
-                $command = "electron-packager . MyApp --platform=$platform";
-                shell_exec($command);
+                            echo "Installing dependencies...\n";
+                            shell_exec("npm install");
+                        }
+                    };
 
-                $outputDir = "./MyApp-$platform";
-                if (is_dir($outputDir)) {
-                    echo ucfirst($platform) . " app built successfully in '$outputDir'.\n";
-                } else {
-                    echo "Error: Failed to build for $platform. Check logs for details.\n";
-                }
-                break;
+                    switch ($platform) {
+                        case 'mac':
+                        case 'windows':
+                        case 'linux':
+                            $ensureTools([
+                                'npm' => 'sudo apt install npm -y || brew install npm',
+                                'electron-packager' => 'npm install -g electron-packager'
+                            ]);
+                            $initializeElectronProject();
 
-            default:
-                echo "Error: Platform $platform is not yet supported with Electron.\n";
-                break;
-        }
-    },
+                            echo "Building for $platform...\n";
+                            $command = "electron-packager . MyApp --platform=$platform";
+                            shell_exec($command);
+
+                            $outputDir = "./MyApp-$platform";
+                            if (is_dir($outputDir)) {
+                                echo ucfirst($platform) . " app built successfully in '$outputDir'.\n";
+                            } else {
+                                echo "Error: Failed to build for $platform. Check logs for details.\n";
+                            }
+                            break;
+
+                        default:
+                            echo "Error: Platform $platform is not yet supported with Electron.\n";
+                            break;
+                    }
+                },
 
 
 
-];
+            ];

@@ -21,9 +21,8 @@ function CssDependency() {
     <!--sweet alert-->
     <link rel="stylesheet" href="assets/style/default_css/sweetalert.css" />
 
-    <!--Google Material Icon->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!--default css-->
     <link rel="stylesheet" type="text/css" href="assets/style/default_css/main.css" />

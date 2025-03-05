@@ -1,3 +1,3 @@
 <?php 
-//here is how you can call a request  component
-//signupHandler();
+//hcalling signupHandler component
+signupHandler();

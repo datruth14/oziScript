@@ -1,4 +1,55 @@
 <?php
+//creating a comand line to handle screen creation
+//creating a comand line to handle screen creation
+//creating a comand line to handle screen creation
+function create_screen($screen_name) {
+    $view_file = 'view.php';
+    $screen_path = "screens/$screen_name.php";
+    $component_path = "components/$screen_name.php";
+    
+    // Step 1: Modify view.php
+    $function_code = "\n//creating component $screen_name()\n";
+    $function_code .= "function $screen_name()\n";
+    $function_code .= "{\n";
+    $function_code .= "  //require \"system_files/libraries/db_config.php\";\n";
+    $function_code .= "  require \"components/$screen_name.php\";\n";
+    $function_code .= "}\n";
+    
+    file_put_contents($view_file, $function_code, FILE_APPEND);
+    
+    // Step 2: Create screen file
+    $screen_content = "<?php\n//calling $screen_name() component\n$screen_name();";
+    file_put_contents($screen_path, $screen_content);
+    
+    // Step 3: Create empty component file
+    file_put_contents($component_path, "");
+    
+    echo "Screen '$screen_name' created successfully!\n";
+}
+
+// Command-line handling
+if ($argc > 2 && $argv[1] === 'ozi' && $argv[2] === 'screen') {
+    if (isset($argv[3])) {
+        create_screen($argv[3]);
+    } else {
+        echo "Error: No screen name provided.\n";
+    }
+} else {
+    echo "Usage: php ozi screen <screen_name>\n";
+}
+//creating a comand line to handle screen creation
+//creating a comand line to handle screen creation
+//creating a comand line to handle screen creation
+
+
+
+
+
+
+
+
+
+
 
 //functions to handle widget installation and uninstallation
 //functions to handle widget installation and uninstallation
@@ -116,6 +167,15 @@
                 }
             }
         }
+//functions to handle widget installation and uninstallation
+//functions to handle widget installation and uninstallation
+//functions to handle widget installation and uninstallation
+
+
+
+
+
+
 
 
 
@@ -277,6 +337,100 @@
                 }
             }
         }
+//functions to handle plugin installation and uninstallation
+//functions to handle plugin installation and uninstallation
+//functions to handle plugin installation and uninstallation
 
 
 
+
+
+
+
+//function to create_bk_request and delete
+//function to create_bk_request and delete
+//function to create_bk_request and delete
+// Function to create a backend request
+
+function create_bk_request($request_name) {
+    $bk_request_file = 'create_bk_request.php';
+    $call_bk_request_file = 'call_bk_request.php';
+    $core_path = "cores/$request_name.php";
+
+    // Step 1: Modify create_bk_request.php
+    if (!file_exists($bk_request_file)) {
+        file_put_contents($bk_request_file, "<?php\n");
+    }
+
+    $bk_request_content = file_get_contents($bk_request_file);
+    if (strpos($bk_request_content, "function $request_name(") !== false) {
+        echo "Error: Function '$request_name' already exists in $bk_request_file.\n";
+        return;
+    }
+
+    $function_code = "\n// Creating $request_name\n";
+    $function_code .= "function $request_name()\n{\n";
+    $function_code .= "    //require \"system_files/libraries/db_config.php\";\n"; // ✅ Only added here
+    $function_code .= "    require \"cores/$request_name.php\";\n";
+    $function_code .= "}\n";
+
+    file_put_contents($bk_request_file, $function_code, FILE_APPEND);
+
+    // Step 2: Modify call_bk_request.php
+    if (!file_exists($call_bk_request_file)) {
+        file_put_contents($call_bk_request_file, "<?php\n");
+    }
+
+    $call_content = file_get_contents($call_bk_request_file);
+    if (strpos($call_content, "$request_name();") === false) {
+        $call_content .= "\n// Calling $request_name component\n$request_name();\n";
+        file_put_contents($call_bk_request_file, $call_content);
+    }
+
+    // Step 3: Create an empty core file if it doesn't exist
+    if (!file_exists($core_path)) {
+        file_put_contents($core_path, "<?php\n");
+    }
+
+    echo "Backend request '$request_name' created successfully!\n";
+}
+
+
+// Function to delete a backend request
+function delete_bk_request($request_name) {
+    $bk_request_file = 'create_bk_request.php';
+    $call_bk_request_file = 'call_bk_request.php';
+    $core_path = "cores/$request_name.php";
+
+    // Step 1: Remove function from create_bk_request.php
+    if (file_exists($bk_request_file)) {
+        $bk_request_content = file_get_contents($bk_request_file);
+        
+        // Remove the entire function block
+        $pattern = "/\n\/\/ Creating $request_name\nfunction $request_name\(\)\n\{\n.*?\n\}\n/s";
+        $bk_request_content = preg_replace($pattern, "", $bk_request_content);
+
+        file_put_contents($bk_request_file, $bk_request_content);
+    }
+
+    // Step 2: Remove function call from call_bk_request.php
+    if (file_exists($call_bk_request_file)) {
+        $call_bk_request_content = file_get_contents($call_bk_request_file);
+        $pattern = "/\n\/\/ Calling $request_name component\n$request_name\(\);\n/s";
+        $call_bk_request_content = preg_replace($pattern, "", $call_bk_request_content);
+
+        file_put_contents($call_bk_request_file, $call_bk_request_content);
+    }
+
+    // Step 3: Delete core file
+    if (file_exists($core_path)) {
+        unlink($core_path);
+    }
+
+    echo "Backend request '$request_name' deleted successfully!\n";
+}
+
+
+//function to create_bk_request and delete
+//function to create_bk_request and delete
+//function to create_bk_request and delete

@@ -1,12 +1,695 @@
 #!/usr/bin/env php
 <?php
-
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+//Ozi script comand line development
+//Dont edit any code on this file
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
+// Define commands
+//require "system_files/libraries/ozi_comands/comands.php";
 require "system_files/libraries/ozi_comands/comands.php";
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
+// Get command and arguments
+//require "system_files/libraries/ozi_comands/comands_args.php";
 require "system_files/libraries/ozi_comands/comands_args.php";
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
+// Check if command exists
+//require "system_files/libraries/ozi_comands/check_comands_exist.php";
 require "system_files/libraries/ozi_comands/check_comands_exist.php";
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
