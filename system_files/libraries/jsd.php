@@ -3,7 +3,7 @@
 function JavascriptDependency() {
     ?>
             <!-- Bootstrap JS File -->
-            <script src="aassets/style/default_js/bootstrap.bundle.min.js"></script> 
+            <script src="assets/style/default_js/bootstrap.bundle.min.js"></script> 
 
             <!--sweet alert-->
             <script src="assets/style/default_js/sweetalert.js"></script>
