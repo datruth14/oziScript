@@ -1,7 +1,7 @@
 
 
 🚀 **Ozi Script Documentation**  
-**Version: 0.5**  
+
 
 Ozi Script is an easy-to-use web development framework designed to simplify both front-end and back-end web development. Built on modern development principles, it adopts a **component-based architecture**, where every element is a reusable component. Ozi Script ensures that your projects follow DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principles for efficient coding.
 
