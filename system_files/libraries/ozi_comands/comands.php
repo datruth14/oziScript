@@ -139,7 +139,7 @@ $commands = [
                 echo "Created folder: $screensFolder\n";
             }
 
-            $screenFile = "$screensFolder/$screenName"; // File without extension
+            $screenFile = "$screensFolder/$screenName".".ozi"; // File without extension
             if (!file_exists($screenFile)) {
                 file_put_contents($screenFile, "<?php $screenName(); // calling $screenName component ?>");
                 echo "Created screen file: $screenFile (no extension)\n";

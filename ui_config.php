@@ -25,14 +25,13 @@
 <!-- App Entry Point -->
 <!-- App Entry Point -->
 <!-- App Entry Point -->
-
-<div id="content">
+  <div id="app">
     <?php ScreenRouter(); ?>
-</div>
+  </div>
 
 
 
-   
+
 
 <!-- Calling Javascript Dependency -->
 <!-- Calling Javascript Dependency -->
