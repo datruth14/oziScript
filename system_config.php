@@ -44,9 +44,7 @@ $files = [
     'widgets' => [
         /*=======  GETTING WIDGETS FILES ....  ============*/
 
-        // Getting linkTo widget
-        require "system_files/widgets/linkTo.php",
-/*=======  END GETTING WIDGETS FILES .... ============*/],
+        /*=======  END GETTING WIDGETS FILES .... ============*/],
 
 
     'system_setup' => [
