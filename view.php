@@ -7,9 +7,3 @@ function homepage()
 }
 
 
-function about() {
-    //require "system_files/libraries/db_config.php";
-    require "components/about.php";
-}
-
-
