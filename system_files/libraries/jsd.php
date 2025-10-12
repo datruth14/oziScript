@@ -16,42 +16,41 @@ function JavascriptDependency() {
 
             <!--Dynamic navigation system-->
             <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                const app = document.getElementById("app");
+            document.addEventListener("DOMContentLoaded", () => {
+            const app = document.getElementById("app");
 
-                // Click delegation for all linkTo elements
-                document.body.addEventListener("click", (e) => {
-                    const link = e.target.closest("[data-linkto]");
-                    if (!link) return;
+            document.body.addEventListener("click", (e) => {
+                const link = e.target.closest("[data-linkto]");
+                if (!link) return;
+                e.preventDefault();
 
-                    e.preventDefault();
-                    const url = link.getAttribute("data-linkto");
-                    navigateTo(url);
-                });
+                const url = link.getAttribute("data-linkto");
+                navigateTo(url);
+            });
 
-                function navigateTo(url) {
-                    history.pushState({ url }, "", url);
-                    loadScreen(url);
-                }
+            function navigateTo(url) {
+                history.pushState({ url }, "", url || "index.php");
+                loadScreen(url);
+            }
 
-                function loadScreen(url) {
-                    // Ensure default homepage loads if no screen param
-                    if (!url.includes("s=")) {
-                    htmx.ajax("GET", "index.php", { target: "#app", swap: "innerHTML" });
-                    } else {
-                    htmx.ajax("GET", url, { target: "#app", swap: "innerHTML" });
-                    }
-                }
+            function loadScreen(url) {
+                const targetUrl = url && url !== "" ? url : "index.php";
+                htmx.ajax("GET", targetUrl, { target: "#app", swap: "innerHTML" });
+            }
 
-                window.addEventListener("popstate", (e) => {
-                    const url = e.state?.url || location.search || "index.php";
-                    loadScreen(url);
-                });
+            window.addEventListener("popstate", (e) => {
+                const url = e.state?.url || "";
+                loadScreen(url);
+            });
 
-                // Initial load
-                loadScreen(location.search || "index.php");
-                });
+            // Initial page load
+            loadScreen(location.search);
+            });
             </script>
+
+
+
+
 
 
    <?php 
