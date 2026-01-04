@@ -117,6 +117,122 @@ function updateConfigFile($configFile, $widgetName, $folder, $action)
         }
     }
 }
+
+function listWidgets()
+{
+    $githubUser = "datruth14";
+    $repository = "oziDependencies";
+    $branch = "main";
+    $apiUrl = "https://api.github.com/repos/$githubUser/$repository/contents/dependencies/widgets?ref=$branch";
+
+    echo "Fetching available widgets from GitHub...\n";
+
+    $ch = curl_init($apiUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'User-Agent: oziScript-CLI'
+    ]);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode !== 200) {
+        echo "Failed to fetch widgets. (HTTP $httpCode)\n";
+        return;
+    }
+
+    $files = json_decode($response, true);
+    if (!is_array($files)) {
+        echo "Error parsing GitHub response.\n";
+        return;
+    }
+
+    echo "\n📦 Available Ozi Widgets:\n";
+    echo "--------------------------\n";
+    foreach ($files as $file) {
+        if ($file['type'] === 'file' && str_ends_with($file['name'], '.php')) {
+            $name = str_replace('.php', '', $file['name']);
+            echo " - $name\n";
+        }
+    }
+    echo "--------------------------\n";
+    echo "Use 'php ozi widget <name> install' to add one.\n";
+}
+
+function fetchWidgetFunctions($widgetName)
+{
+    $githubUser = "datruth14";
+    $repository = "oziDependencies";
+    $branch = "main";
+    $url = "https://raw.githubusercontent.com/$githubUser/$repository/$branch/dependencies/widgets/$widgetName.php";
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    $content = curl_exec($ch);
+    curl_close($ch);
+
+    if (!$content) return [];
+
+    // Match all functions that start with the widget name pattern or common conventions
+    preg_match_all('/function\s+([a-zA-Z0-9_]+)\s*\(/', $content, $matches);
+    return $matches[1] ?? [];
+}
+
+function searchWidgets($query)
+{
+    $githubUser = "datruth14";
+    $repository = "oziDependencies";
+    $branch = "main";
+    $apiUrl = "https://api.github.com/repos/$githubUser/$repository/contents/dependencies/widgets?ref=$branch";
+
+    if (empty($query)) {
+        listWidgets();
+        return;
+    }
+
+    $ch = curl_init($apiUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'User-Agent: oziScript-CLI'
+    ]);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode !== 200) {
+        echo "Failed to contact GitHub.\n";
+        return;
+    }
+
+    $files = json_decode($response, true);
+    $matches = [];
+    foreach ($files as $file) {
+        if (str_contains(strtolower($file['name']), strtolower($query))) {
+            $matches[] = str_replace('.php', '', $file['name']);
+        }
+    }
+
+    if (count($matches) > 0) {
+        echo "\n🔍 Search results for '$query':\n";
+        foreach ($matches as $match) {
+            echo " 📦 Widget: $match\n";
+            $functions = fetchWidgetFunctions($match);
+            if (!empty($functions)) {
+                echo "    Available Functions:\n";
+                foreach ($functions as $fn) {
+                    echo "    - $fn()\n";
+                }
+            }
+            echo "\n";
+        }
+        echo "Use 'php ozi widget <name> install' to add a widget.\n";
+    } else {
+        echo "\n❌ No widgets found matching '$query'.\n";
+    }
+}
 //functions to handle widget installation and uninstallation
 //functions to handle widget installation and uninstallation
 //functions to handle widget installation and uninstallation
