@@ -1,20 +1,28 @@
-<div class="px-4 py-5 my-5  text-center">
-  <center>
-    <img class="animate__animated  animate__pulse animate__infinite	infinite
- animate__slow	2s" src="assets/media/images/icons/android-chrome-192x192.png" alt="OziApp" class="lazy"
-      style="width:120px;height:120px;">
-  </center>
-  <h1 class="display-5 fw-bold" style="color:#020238;">Congratulations!</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4" style="color:purple;font-weight:430;">You have successfully downloaded and installed ozi script
-      project structure, Let's start by editing the index.php component inside your project directory. <a href="#">
-        Learn More </a></p>
+<?php
+/**
+ * oziScript Homepage
+ * This file uses the Base UI Kit widgets to assemble the homepage.
+ */
 
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <a id="getbtn" href="<?= linkTo("widgets&&s=widgets&&id=12"); ?>" class="btn  btn-sm btn-success"> Get Started
-        With Widgets </a>
-      <a href="<?= linkTo("about"); ?>" class="btn btn-sm btn-primary"> About </a>
-    </div>
+// 1. Navigation
+ozi_nav_simple(
+    brand: "oziScript",
+    links: [
+        "Home" => linkTo("homepage"),
+        "Widgets" => linkTo("widgets"),
+        "About" => linkTo("about")
+    ]
+);
 
-  </div>
-</div>
+// 2. Hero Section (Content from original index)
+ozi_hero_modern(
+    title: "Congratulations!",
+    desc: "You have successfully downloaded and installed the oziScript project structure. Let's start by editing this component to build your dream app.",
+    cta: "Explore Widgets",
+    img: "assets/media/images/icons/android-chrome-192x192.png"
+);
+
+// 3. Footer
+ozi_footer_clean(
+    copyright: "oziScript Framework"
+);
