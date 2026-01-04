@@ -96,26 +96,29 @@ $commands = [
 
         $screenName = $args[2];
         $action = strtolower($args[3]); // 'create' or 'delete'
-
+    
         $viewFile = 'view.php';
         $componentsFolder = 'components';
         $screensFolder = 'screens';
         $dbConfigPath = "system_files/libraries/db_config.php";
 
         if ($action === 'create') {
+            // Ensure function name is valid (PHP functions can't start with numbers)
+            $functionName = preg_match('/^[0-9]/', $screenName) ? "screen_$screenName" : $screenName;
+
             // Step 1: Append the function to view.php with spacing
-            $functionContent = "function $screenName() {\n    //require \"$dbConfigPath\";\n    require \"$componentsFolder/$screenName.php\";\n}\n\n\n";
+            $functionContent = "function $functionName() {\n    //require \"$dbConfigPath\";\n    require \"$componentsFolder/$screenName.php\";\n}\n\n\n";
 
             if (!file_exists($viewFile)) {
                 echo "The file $viewFile does not exist. Creating it...\n";
                 file_put_contents($viewFile, "<?php\n\n" . $functionContent);
             } else {
                 $viewContent = file_get_contents($viewFile);
-                if (strpos($viewContent, "function $screenName()") !== false) {
-                    echo "The function $screenName already exists in $viewFile.\n";
+                if (strpos($viewContent, "function $functionName()") !== false) {
+                    echo "The function $functionName already exists in $viewFile.\n";
                 } else {
                     file_put_contents($viewFile, $functionContent, FILE_APPEND);
-                    echo "Function $screenName added to $viewFile with appropriate spacing.\n";
+                    echo "Function $functionName added to $viewFile with appropriate spacing.\n";
                 }
             }
 
@@ -141,7 +144,7 @@ $commands = [
 
             $screenFile = "$screensFolder/$screenName"; // File without extension
             if (!file_exists($screenFile)) {
-                file_put_contents($screenFile, "<?php $screenName(); // calling $screenName component ?>");
+                file_put_contents($screenFile, "<?php $functionName(); // calling $screenName component ?>");
                 echo "Created screen file: $screenFile (no extension)\n";
             } else {
                 echo "Screen file $screenFile already exists.\n";
@@ -187,7 +190,7 @@ $commands = [
 
 
     // Command-line config for backend requests
-     'create_bk_request' => function () {
+    'create_bk_request' => function () {
         global $argv;
         if (!isset($argv[2])) {
             echo "Usage: php ozi create_bk_request <request_name>\n";
@@ -195,8 +198,8 @@ $commands = [
         }
         create_bk_request($argv[2]);
     },
-  
-    
+
+
     // Command-line config for backend requests delete
     'delete_bk_request' => function () {
         global $argv;
@@ -295,41 +298,41 @@ $commands = [
 
             app.on('ready', createWindow);
             JS;
-                            file_put_contents('main.js', $mainJs);
+                file_put_contents('main.js', $mainJs);
 
-                            echo "Installing dependencies...\n";
-                            shell_exec("npm install");
-                        }
-                    };
+                echo "Installing dependencies...\n";
+                shell_exec("npm install");
+            }
+        };
 
-                    switch ($platform) {
-                        case 'mac':
-                        case 'windows':
-                        case 'linux':
-                            $ensureTools([
-                                'npm' => 'sudo apt install npm -y || brew install npm',
-                                'electron-packager' => 'npm install -g electron-packager'
-                            ]);
-                            $initializeElectronProject();
+        switch ($platform) {
+            case 'mac':
+            case 'windows':
+            case 'linux':
+                $ensureTools([
+                    'npm' => 'sudo apt install npm -y || brew install npm',
+                    'electron-packager' => 'npm install -g electron-packager'
+                ]);
+                $initializeElectronProject();
 
-                            echo "Building for $platform...\n";
-                            $command = "electron-packager . MyApp --platform=$platform";
-                            shell_exec($command);
+                echo "Building for $platform...\n";
+                $command = "electron-packager . MyApp --platform=$platform";
+                shell_exec($command);
 
-                            $outputDir = "./MyApp-$platform";
-                            if (is_dir($outputDir)) {
-                                echo ucfirst($platform) . " app built successfully in '$outputDir'.\n";
-                            } else {
-                                echo "Error: Failed to build for $platform. Check logs for details.\n";
-                            }
-                            break;
+                $outputDir = "./MyApp-$platform";
+                if (is_dir($outputDir)) {
+                    echo ucfirst($platform) . " app built successfully in '$outputDir'.\n";
+                } else {
+                    echo "Error: Failed to build for $platform. Check logs for details.\n";
+                }
+                break;
 
-                        default:
-                            echo "Error: Platform $platform is not yet supported with Electron.\n";
-                            break;
-                    }
-                },
+            default:
+                echo "Error: Platform $platform is not yet supported with Electron.\n";
+                break;
+        }
+    },
 
 
 
-            ];
+];

@@ -107,11 +107,11 @@ This folder stores all your project’s media and styling files.
 
 #### **2. `Components/`**  
 Houses all your app’s screens (pages) and reusable components.  
-- 🔧 **Comp_files/**: Contains small reusable components like `header.php` and `footer.php`.
+- 🔧 **comp_files/**: Contains small reusable components like `header.php` and `footer.php`.
 
 #### **3. `Cores/`**  
 All back-end logic resides here.  
-- 🖥️ **Cores_files/**: Auxiliary scripts for backend processes (e.g., database connections).
+- 🖥️ **cores_files/**: Auxiliary scripts for backend processes (e.g., database connections).
 
 #### **4. `Screens/`**  
 Contains app route definitions (e.g., home, about, etc.).

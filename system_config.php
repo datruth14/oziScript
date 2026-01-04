@@ -1,6 +1,25 @@
 <?php
 /*starting a session, this allows you to store data in $_SESSION['data'] in any of your components*/
-session_start();
+if (php_sapi_name() !== 'cli') {
+    session_start();
+}
+
+function linkTo($target)
+{
+    if (strpos($target, '&&') !== false) {
+        $parts = explode('&&', $target);
+        $screen = array_shift($parts);
+        $prettyParams = "";
+        foreach ($parts as $param) {
+            if (strpos($param, '=') !== false) {
+                list($key, $val) = explode('=', $param);
+                $prettyParams .= "/" . $key . "/" . $val;
+            }
+        }
+        return "/" . $screen . $prettyParams;
+    }
+    return "/" . $target;
+}
 //echo ini_get("session.gc_maxlifetime"), "\n";
 
 /** BELOW ARE THE REQUIRED DEPENDENCIES FOR OZI SCRIPT, PLUGIN AND WIDGETS ARE TO BE COMMENTED or UNCOMMENTED IF NOT IN USE. You Can Add New Labraries If You Know How It Works.. Learn More At https://oziscript.com */
@@ -38,13 +57,14 @@ $files = [
         /*=======  GETTING PLUGIN FILES ....  ============*/
 
 
-                /*=======  END OF GETTING PLUGIN FILES ....  ============*/
+        /*=======  END OF GETTING PLUGIN FILES ....  ============*/
     ],
 
     'widgets' => [
         /*=======  GETTING WIDGETS FILES ....  ============*/
 
-        /*=======  END GETTING WIDGETS FILES .... ============*/],
+        /*=======  END GETTING WIDGETS FILES .... ============*/
+    ],
 
 
     'system_setup' => [
