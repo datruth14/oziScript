@@ -22,10 +22,10 @@
 - Apache with `mod_rewrite` enabled (XAMPP/cPanel)
 
 ### 2. Setup
-Clone the repository into your web root:
+Download and install oziScript via Composer:
 ```bash
-git clone https://github.com/datruth14/oziScript.git my-app
-cd my-app
+composer create-project ozi/ozi_script projectName
+cd projectName
 ```
 
 ### 3. Serve Locally
