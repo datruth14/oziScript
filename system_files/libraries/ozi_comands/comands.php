@@ -21,25 +21,35 @@ $commands = [
 
         $args = $argv;
 
-        if (count($args) < 4 || $args[1] !== 'widget') {
+        if (count($args) < 3 || $args[1] !== 'widget') {
             echo "Usage:\n";
+            echo "  php ozi widget list\n";
+            echo "  php ozi widget search <query>\n";
             echo "  php ozi widget <widgetName> install\n";
             echo "  php ozi widget <widgetName> remove\n";
             return;
         }
 
-        $widgetName = $args[2];
-        $action = strtolower($args[3] ?? '');
-
+        $actionOrName = $args[2];
         $folder = "system_files/widgets";
         $configFile = 'system_config.php';
 
-        if ($action === 'install') {
-            installWidget($widgetName, $folder, $configFile);
-        } elseif ($action === 'remove') {
-            removeWidget($widgetName, $folder, $configFile);
+        if (strtolower($actionOrName) === 'list') {
+            listWidgets();
+        } elseif (strtolower($actionOrName) === 'search') {
+            $query = $args[3] ?? '';
+            searchWidgets($query);
         } else {
-            echo "Invalid action. Use 'install' or 'remove'.\n";
+            $widgetName = $actionOrName;
+            $action = strtolower($args[3] ?? '');
+
+            if ($action === 'install') {
+                installWidget($widgetName, $folder, $configFile);
+            } elseif ($action === 'remove') {
+                removeWidget($widgetName, $folder, $configFile);
+            } else {
+                echo "Invalid action. Use 'install' or 'remove'.\n";
+            }
         }
     },
 
@@ -54,25 +64,35 @@ $commands = [
 
         $args = $argv;
 
-        if (count($args) < 4 || $args[1] !== 'plugin') {
+        if (count($args) < 3 || $args[1] !== 'plugin') {
             echo "Usage:\n";
+            echo "  php ozi plugin list\n";
+            echo "  php ozi plugin search <query>\n";
             echo "  php ozi plugin <pluginName> install\n";
             echo "  php ozi plugin <pluginName> remove\n";
             return;
         }
 
-        $pluginName = $args[2];
-        $action = strtolower($args[3] ?? '');
-
+        $actionOrName = $args[2];
         $folder = "system_files/plugins";
         $configFile = 'system_config.php';
 
-        if ($action === 'install') {
-            installPluginFolder($pluginName, $folder, $configFile);
-        } elseif ($action === 'remove') {
-            removePluginFolder($pluginName, $folder, $configFile);
+        if (strtolower($actionOrName) === 'list') {
+            listPlugins();
+        } elseif (strtolower($actionOrName) === 'search') {
+            $query = $args[3] ?? '';
+            searchPlugins($query);
         } else {
-            echo "Invalid action. Use 'install' or 'remove'.\n";
+            $pluginName = $actionOrName;
+            $action = strtolower($args[3] ?? '');
+
+            if ($action === 'install') {
+                installPluginFolder($pluginName, $folder, $configFile);
+            } elseif ($action === 'remove') {
+                removePluginFolder($pluginName, $folder, $configFile);
+            } else {
+                echo "Invalid action. Use 'install' or 'remove'.\n";
+            }
         }
     },
 

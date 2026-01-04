@@ -407,9 +407,90 @@ function updatePluginConfigFile($configFile, $pluginName, $folder, $action)
         }
     }
 }
-//functions to handle plugin installation and uninstallation
-//functions to handle plugin installation and uninstallation
-//functions to handle plugin installation and uninstallation
+function listPlugins()
+{
+    $githubUser = "datruth14";
+    $repository = "oziDependencies";
+    $branch = "main";
+    $apiUrl = "https://api.github.com/repos/$githubUser/$repository/contents/dependencies/plugins?ref=$branch";
+
+    echo "Fetching available plugins from GitHub...\n";
+
+    $ch = curl_init($apiUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'User-Agent: oziScript-CLI'
+    ]);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode !== 200) {
+        echo "Failed to fetch plugins. (HTTP $httpCode)\n";
+        return;
+    }
+
+    $files = json_decode($response, true);
+    if (!is_array($files)) {
+        echo "Error parsing GitHub response.\n";
+        return;
+    }
+
+    echo "\n🔌 Available Ozi Plugins:\n";
+    echo "--------------------------\n";
+    foreach ($files as $file) {
+        if ($file['type'] === 'dir') {
+            echo " - " . $file['name'] . "\n";
+        }
+    }
+    echo "--------------------------\n";
+    echo "Use 'php ozi plugin <name> install' to add one.\n";
+}
+
+function searchPlugins($query)
+{
+    $githubUser = "datruth14";
+    $repository = "oziDependencies";
+    $branch = "main";
+    $apiUrl = "https://api.github.com/repos/$githubUser/$repository/contents/dependencies/plugins?ref=$branch";
+
+    if (empty($query)) {
+        listPlugins();
+        return;
+    }
+
+    $ch = curl_init($apiUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'User-Agent: oziScript-CLI'
+    ]);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode !== 200) {
+        echo "Failed to contact GitHub.\n";
+        return;
+    }
+
+    $files = json_decode($response, true);
+    $matches = [];
+    foreach ($files as $file) {
+        if ($file['type'] === 'dir' && str_contains(strtolower($file['name']), strtolower($query))) {
+            $matches[] = $file['name'];
+        }
+    }
+
+    if (count($matches) > 0) {
+        echo "\n🔍 Search results for '$query':\n";
+        foreach ($matches as $match) {
+            echo " - $match\n";
+        }
+    } else {
+        echo "\n❌ No plugins found matching '$query'.\n";
+    }
+}
 
 
 
