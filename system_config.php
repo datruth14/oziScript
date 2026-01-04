@@ -48,6 +48,8 @@ $files = [
         require "system_files/libraries/jsd.php",
         //calling iosMedia lib
         require "system_files/libraries/ios_media.php",
+        //calling Base UI Kit
+        require "system_files/libraries/base_ui_kit.php",
 
         /*=======  END OF GETTING LIRARIES FILES ....  ============*/
 
